@@ -5,7 +5,7 @@ import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import CommentIcon from '@mui/icons-material/Comment';
-import IconButton from '@mui/material/IconButton';
+import NavBarElement from "./components/NavBarElement";
 
 const Lista = (props: any) => {
   return (
@@ -33,6 +33,8 @@ const App = (props: any) => {
 	});
 	return (
 		<div className="App">
+			<NavBarElement/>
+
 			<h1>Lista de usuários</h1>
 
       <Lista usuarios={users}></Lista>
