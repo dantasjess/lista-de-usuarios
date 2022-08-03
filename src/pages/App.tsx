@@ -1,11 +1,11 @@
 import { useState, useEffect } from "react";
-import "./App.css";
+import "../App.css";
 import * as React from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
 import ListItemText from '@mui/material/ListItemText';
 import CommentIcon from '@mui/icons-material/Comment';
-import NavBarElement from "./components/NavBarElement";
+import NavBarElement from "../components/NavBarElement";
 
 const Lista = (props: any) => {
   return (
