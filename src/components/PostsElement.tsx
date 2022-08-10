@@ -7,14 +7,11 @@ import ListItemText from '@mui/material/ListItemText';
 
 const PostsElement = (props: any) => {
   return (
-    <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+    <List sx={{ width: '100%' }}>
         {props.posts.map((post: any) => (    
             <>
             <ListItem alignItems="flex-start">
-                <ListItemText
-                    primary={post.title}
-                    secondary={
-                        <React.Fragment>
+                <ListItemText primary={post.title} secondary={ <React.Fragment>
                         {post.body}
                         </React.Fragment>
                     }

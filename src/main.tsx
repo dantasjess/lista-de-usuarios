@@ -19,8 +19,8 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
           path="*"
           element={
             <>
-              <Typography sx={{ fontFamily: 'Comfortaa', fontSize: 40, color: '#EC7E31' }}>Essa página não existe.</Typography>
-              <Link href='/' sx={{ fontFamily: 'Comfortaa' }}>Voltar para página inicial</Link>
+              <Typography>Erro</Typography>
+              <Link href='/'>Voltar para página inicial</Link>
             </>
           }
         />

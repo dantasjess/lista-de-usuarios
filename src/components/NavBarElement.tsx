@@ -20,10 +20,12 @@ const NavBarElement = (props: any) => {
             >
               <MenuIcon />
             </IconButton>
-            <Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
+            {/*<Typography variant="h6" component="div" sx={{ flexGrow: 1 }}>
               News
-            </Typography>
+            </Typography>*/}
             <Button color="inherit">Login</Button>
+            <Button color="inherit" href="pages/Posts">Posts</Button>
+            <Button color="inherit" href="Tarefas">Tarefas</Button>
           </Toolbar>
         </AppBar>
       </Box>
