@@ -24,8 +24,8 @@ const TarefasElement = (props: any) => {
 	return (
         <>
             <NavBarElement user_id={params.user_id} current_page="tarefas"/>
-            <Typography variant='h3' sx={{ fontFamily: 'Comfortaa', color: '#EC7E31' }}>Tarefas</Typography>
-            {loading ? <Typography sx={{ fontFamily: 'Comfortaa', fontSize: 25, color: '#EC7E31' }}>Carregando...</Typography> : null}
+            <Typography>Tarefas</Typography>
+            {loading ? <Typography>Carregando...</Typography> : null}
             <TarefasElement tasks={tarefas}/>
         </>
     )

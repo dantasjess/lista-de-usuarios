@@ -24,8 +24,8 @@ const PostsElement = (props: any) => {
 	return (
         <>
             <NavBarElment user_id={params.user_id} current_page="posts"/>
-            <Typography variant='h3' sx={{ fontFamily: 'Comfortaa', color: '#EC7E31' }}>Posts</Typography>
-            {loading ? <Typography sx={{ fontFamily: 'Comfortaa', fontSize: 25, color: '#EC7E31' }}>Carregando...</Typography> : null}
+            <Typography variant='h3'>Posts</Typography>
+            {loading ? <Typography >Carregando...</Typography> : null}
             <PostsElement posts={posts}/>
         </>
     )
