@@ -1,12 +1,11 @@
 import "../App.css";
 import { useState, useEffect } from "react";
-import Tarefas from "../components/TarefasElement";
-import NavBarElement from "../components/NavBarElement";
+import TarefasElement from "../components/TarefasElement";
 import { Typography } from '@mui/material';
 import { useParams } from "react-router-dom";
 
 
-const TarefasElement = (props: any) => {
+const Tarefas = (props: any) => {
     let params = useParams();
     
     const [tarefas, setTarefas] = useState([]);
@@ -23,7 +22,6 @@ const TarefasElement = (props: any) => {
 
 	return (
         <>
-            <NavBarElement user_id={params.user_id} current_page="tarefas"/>
             <Typography>Tarefas</Typography>
             {loading ? <Typography>Carregando...</Typography> : null}
             <TarefasElement tasks={tarefas}/>
@@ -31,4 +29,4 @@ const TarefasElement = (props: any) => {
     )
 }
 
-export default TarefasElement
+export default Tarefas

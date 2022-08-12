@@ -1,12 +1,11 @@
 import "../App.css";
-import { useState, useEffect } from "react";
-import PostListComponent from "../components/PostsElement";
-import NavBarElment from "../components/NavBarElement";
-import { Typography } from '@mui/material';
-import { useParams } from "react-router-dom";
+import {useState, useEffect} from "react";
+import PostsElement from "../components/PostsElement";
+import {Typography} from "@mui/material";
+import {useParams} from "react-router-dom";
 
 
-const PostsElement = (props: any) => {
+const Posts = (props: any) => {
     let params = useParams();
     
     const [posts, setPosts] = useState([]);
@@ -23,12 +22,10 @@ const PostsElement = (props: any) => {
 
 	return (
         <>
-            <NavBarElment user_id={params.user_id} current_page="posts"/>
-            <Typography variant='h3'>Posts</Typography>
-            {loading ? <Typography >Carregando...</Typography> : null}
+            <Typography>Posts</Typography>
             <PostsElement posts={posts}/>
         </>
     )
 }
 
-export default PostsElement
+export default Posts

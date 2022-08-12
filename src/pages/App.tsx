@@ -7,13 +7,20 @@ import ListItemText from '@mui/material/ListItemText';
 import CommentIcon from '@mui/icons-material/Comment';
 import NavBarElement from "../components/NavBarElement";
 import PostsElement from "../components/PostsElement";
+import ListItemButton from '@mui/material/ListItemButton';
 
 const Lista = (props: any) => {
   return (
-    <List sx={{ width: '100%', maxWidth: 720, bgcolor: 'background.paper'}}>
+    <List sx={{ width: '100%', maxWidth: 720, bgcolor: 'black'}}>
       {props.usuarios.map((value:any) => (
         <ListItem>
-          <ListItemText primary={`${value.name}`} /> <br/>
+          <ListItemText primary={`${value.name}`} /> 
+		  <ListItemButton href="pages/Posts">
+  				<ListItemText primary="Posts" sx={{color: "white"}} />
+			</ListItemButton>
+			<ListItemButton href="pages/Tarefas">
+  				<ListItemText primary="Tarefas" sx={{color: "white"}} />
+			</ListItemButton>
         </ListItem>
       ))}
     </List>
@@ -34,12 +41,9 @@ const App = (props: any) => {
 	});
 	return (
 		<div className="App">
-			<NavBarElement/>
-			
-
-			<h1>Lista de usuários</h1>
-
-      <Lista usuarios={users}></Lista>
+		<NavBarElement/>
+		<h1>Lista de usuários</h1>
+      	<Lista usuarios={users}></Lista>
 			
 
 			<div className="card">
