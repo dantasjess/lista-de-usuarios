@@ -13,14 +13,14 @@ ReactDOM.createRoot(document.getElementById('root') as HTMLElement).render(
     <BrowserRouter>
       <Routes>
         <Route path="/" element={<App />} />
-        <Route path="tarefas/:user_id" element={<Tarefas/>} />
-        <Route path="posts/:user_id" element={<Posts/>} />
+        <Route path="tarefas/:user_id" element={<Tarefas />} />
+        <Route path="posts/:user_id" element={<Posts />} />
         <Route
           path="*"
           element={
             <>
               <Typography>Erro</Typography>
-              <Link href='/'>Voltar para página inicial</Link>
+              <Link href='/'>Página inicial</Link>
             </>
           }
         />

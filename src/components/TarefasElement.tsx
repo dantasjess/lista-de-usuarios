@@ -5,10 +5,10 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 const TarefasElement = (props:any) => {
     return (
         <FormGroup>
-            {props.tasks.map((task: any) => (    
+            {props.tarefas.map((tarefa: any) => (    
                 <FormControlLabel control={
-                    <Checkbox checked={task.completed} inputProps={{ 'aria-label': 'controlled' }} />
-                } label={task.title} />
+                    <Checkbox checked={tarefa.completed} inputProps={{ 'aria-label': 'controlled' }} />
+                } label={tarefa.title} />
             ))}
         </FormGroup>
     );

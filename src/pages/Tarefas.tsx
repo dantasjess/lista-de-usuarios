@@ -23,8 +23,7 @@ const Tarefas = (props: any) => {
 	return (
         <>
             <Typography>Tarefas</Typography>
-            {loading ? <Typography>Carregando...</Typography> : null}
-            <TarefasElement tasks={tarefas}/>
+            <TarefasElement tarefas={tarefas}/>
         </>
     )
 }

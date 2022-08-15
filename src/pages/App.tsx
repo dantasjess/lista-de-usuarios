@@ -8,6 +8,8 @@ import CommentIcon from '@mui/icons-material/Comment';
 import NavBarElement from "../components/NavBarElement";
 import PostsElement from "../components/PostsElement";
 import ListItemButton from '@mui/material/ListItemButton';
+import Button from '@mui/material/Button';
+import { Link } from 'react-router-dom';
 
 const Lista = (props: any) => {
   return (
@@ -18,9 +20,7 @@ const Lista = (props: any) => {
 		  <ListItemButton href="pages/Posts">
   				<ListItemText primary="Posts" sx={{color: "white"}} />
 			</ListItemButton>
-			<ListItemButton href="pages/Tarefas">
-  				<ListItemText primary="Tarefas" sx={{color: "white"}} />
-			</ListItemButton>
+			<ListItemButton color="inherit" component={Link} to={(props.current_page == 'tarefas') ? `/posts/${props.user_id}` : `/tarefas/${props.user_id}`}>Ver {(props.current_page == 'tarefas') ? "Posts" : "Tarefas"}</ListItemButton>
         </ListItem>
       ))}
     </List>
@@ -32,7 +32,7 @@ const App = (props: any) => {
 		{ id: 1, name: "Minora" },
 		{ id: 2, name: "Ataide" },
 	]);
-  const [loading, setLoading] = useState(true);
+  	const [loading, setLoading] = useState(true);
 
 	useEffect(() => {
 		fetch("https://jsonplaceholder.typicode.com/users/")
@@ -44,8 +44,6 @@ const App = (props: any) => {
 		<NavBarElement/>
 		<h1>Lista de usuários</h1>
       	<Lista usuarios={users}></Lista>
-			
-
 			<div className="card">
         {loading ? <h2>Carregando...</h2> : null}
 				{/* <ul>
