@@ -22,7 +22,7 @@ const Posts = (props: any) => {
 
 	return (
         <>
-            <Typography>Posts</Typography>
+            <Typography sx={{fontSize: 40}}>Posts</Typography>
             <PostsElement posts={posts}/>
         </>
     )

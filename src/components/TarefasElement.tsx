@@ -5,11 +5,9 @@ import FormControlLabel from '@mui/material/FormControlLabel';
 const TarefasElement = (props:any) => {
     return (
         <FormGroup>
-            {props.tarefas.map((tarefa: any) => (    
-                <FormControlLabel control={
-                    <Checkbox checked={tarefa.completed} inputProps={{ 'aria-label': 'controlled' }} />
-                } label={tarefa.title} />
-            ))}
+            {props.tarefas.map((tarefa: any) => 
+            (<FormControlLabel control={<Checkbox defaultChecked={tarefa.completed} />}
+             label={tarefa.title} />))}
         </FormGroup>
     );
 }

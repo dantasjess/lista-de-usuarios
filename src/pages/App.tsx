@@ -1,5 +1,4 @@
 import { useState, useEffect } from "react";
-import "../App.css";
 import * as React from 'react';
 import List from '@mui/material/List';
 import ListItem from '@mui/material/ListItem';
@@ -10,18 +9,18 @@ import PostsElement from "../components/PostsElement";
 import ListItemButton from '@mui/material/ListItemButton';
 import Button from '@mui/material/Button';
 import { Link } from 'react-router-dom';
+import Grid from '@mui/material/Grid';
+import { spacing } from "@mui/system";
 
 const Lista = (props: any) => {
   return (
-    <List sx={{ width: '100%', maxWidth: 720, bgcolor: 'black'}}>
+    <List sx={{ width: '100%', maxWidth: 720}}>
       {props.usuarios.map((value:any) => (
-        <ListItem>
-          <ListItemText primary={`${value.name}`} /> 
-		  <ListItemButton href="pages/Posts">
-  				<ListItemText primary="Posts" sx={{color: "white"}} />
-			</ListItemButton>
-			<ListItemButton color="inherit" component={Link} to={(props.current_page == 'tarefas') ? `/posts/${props.user_id}` : `/tarefas/${props.user_id}`}>Ver {(props.current_page == 'tarefas') ? "Posts" : "Tarefas"}</ListItemButton>
-        </ListItem>
+			<ListItem>
+		<ListItemText primary={`${value.name}`} /> 
+		<ListItemButton><Link to={`/posts/${value.id}`}><ListItemText primary="Ver posts" sx={{color: "black"}} /></Link></ListItemButton>
+		<ListItemButton><Link to={`/tarefas/${value.id}`}><ListItemText primary="Ver tarefas" sx={{color: "black"}} /></Link></ListItemButton>
+			</ListItem>	
       ))}
     </List>
   );
@@ -46,10 +45,6 @@ const App = (props: any) => {
       	<Lista usuarios={users}></Lista>
 			<div className="card">
         {loading ? <h2>Carregando...</h2> : null}
-				{/* <ul>
-					{users.map((user) => (<li key={user.id}>{user.name}</li>
-					))}
-				</ul> */}
 			</div>
 		</div>
 	);

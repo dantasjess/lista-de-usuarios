@@ -22,7 +22,7 @@ const Tarefas = (props: any) => {
 
 	return (
         <>
-            <Typography>Tarefas</Typography>
+            <Typography sx={{fontSize: 40}}>Tarefas</Typography>
             <TarefasElement tarefas={tarefas}/>
         </>
     )

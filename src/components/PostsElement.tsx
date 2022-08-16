@@ -8,13 +8,13 @@ import Typography from '@mui/material/Typography';
 
 const PostsElement = (props: any) => {
   return (
-    <List sx={{ width: '100%', bgcolor: 'background.paper' }}>
+    <List sx={{ width: '100%'}}>
         {props.posts.map((post: any) => (    
             <>
             <ListItem>
                 <ListItemText 
-                  primary={ <Typography sx={{ display: 'inline' }} component="span" variant="body2" color="text.primary">{post.title}</Typography>}
-                  secondary={<React.Fragment>{post.body}</React.Fragment>}
+                  primary={<Typography sx={{ fontSize: 20}}>{post.title}</Typography>}
+                  secondary={<Typography>{post.body}</Typography>}
                 />
             </ListItem>
                   </>

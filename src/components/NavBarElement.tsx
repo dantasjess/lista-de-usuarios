@@ -8,19 +8,10 @@ import IconButton from '@mui/material/IconButton';
 
 const NavBarElement = (props: any) => {
     return (
-      <Box sx={{ flexGrow: 1 }}>
-        <AppBar position="static">
+      <Box sx={{ flexGrow: 1}}>
+        <AppBar position="static" sx={{bgcolor:"gray"}}>
           <Toolbar>
-            <IconButton
-              size="large"
-              edge="start"
-              color="inherit"
-              aria-label="menu"
-              sx={{ mr: 2 }}
-            >
-              <MenuIcon />
-            </IconButton>
-            <Button color="inherit">Login</Button>
+            <Button sx={{color:"white", flexGrow: 1}}>Login</Button>
           </Toolbar>
         </AppBar>
       </Box>
