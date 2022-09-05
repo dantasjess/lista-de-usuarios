@@ -1,9 +1,8 @@
 import "../App.css";
 import {useState, useEffect} from "react";
 import PostsElement from "../components/PostsElement";
-import {Typography} from "@mui/material";
 import {useParams} from "react-router-dom";
-
+import NavBarElement from "../components/NavBarElement";
 
 const Posts = (props: any) => {
     let params = useParams();
@@ -22,8 +21,9 @@ const Posts = (props: any) => {
 
 	return (
         <>
-            <Typography sx={{fontSize: 40}}>Posts</Typography>
-            <PostsElement posts={posts}/>
+        <NavBarElement/>
+        <h1>Posts</h1>
+        <PostsElement posts={posts}/>
         </>
     )
 }

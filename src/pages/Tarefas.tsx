@@ -1,8 +1,8 @@
 import "../App.css";
 import { useState, useEffect } from "react";
 import TarefasElement from "../components/TarefasElement";
-import { Typography } from '@mui/material';
 import { useParams } from "react-router-dom";
+import NavBarElement from "../components/NavBarElement";
 
 
 const Tarefas = (props: any) => {
@@ -22,7 +22,8 @@ const Tarefas = (props: any) => {
 
 	return (
         <>
-            <Typography sx={{fontSize: 40}}>Tarefas</Typography>
+            <NavBarElement/>
+            <h1>Tarefas</h1>
             <TarefasElement tarefas={tarefas}/>
         </>
     )
